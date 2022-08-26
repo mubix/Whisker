@@ -11,7 +11,7 @@ jobs:
     - uses: actions/checkout@v2.4.2
     - uses: nuget/setup-nuget@v1.0.6
     - name: Build
-        - dotnet build --configuration Release
+      run: dotnet build --configuration Release
       env:
         DOTNET_CLI_TELEMETRY_OPTOUT: 1
     - name: Create Release
